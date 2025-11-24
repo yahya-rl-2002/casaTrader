@@ -8,7 +8,7 @@ set -e  # Arrêter en cas d'erreur
 
 echo ""
 echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
-echo "🚀 Démarrage du SaaS CasaTrader + Fear & Greed Index"
+echo "🚀 Démarrage de CasaTrader - Plateforme d'Investissement"
 echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
 echo ""
 
@@ -138,9 +138,10 @@ echo "━━━━━━━━━━━━━━━━━━━━━━━━�
 echo ""
 echo "🌐 Accès aux services :"
 echo ""
-echo "   📊 SaaS CasaTrader       : http://localhost:8080"
+echo "   📊 CasaTrader Platform   : http://localhost:8080"
 echo "   📈 Fear & Greed Index    : http://localhost:8080/fear-greed"
-echo "   📉 Fear & Greed Dashboard: http://localhost:8080/fear-greed-dashboard"
+echo "   📄 Rapports Financiers   : http://localhost:8080/reports"
+echo "   📰 Actualités            : http://localhost:8080/news"
 echo "   🔌 API Backend           : http://localhost:8001/api/v1"
 echo ""
 echo "📋 PIDs des processus :"

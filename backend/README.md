@@ -1,7 +1,13 @@
-# Casablanca Fear & Greed Index – Backend
+# CasaTrader Backend API
 
 ## Overview
-FastAPI-powered service that ingests Casablanca Stock Exchange data, computes six sentiment-based components, aggregates a composite Fear & Greed Index, and exposes REST endpoints for downstream consumers (frontend dashboard, analytics tools, automation).
+Backend FastAPI pour **CasaTrader** - Plateforme complète d'investissement boursier pour la Bourse de Casablanca. 
+
+Ce backend fournit :
+- **Fear & Greed Index** : Calcul de l'indice de sentiment du marché
+- **Scraping de rapports financiers** : Téléchargement automatique des rapports de 55+ entreprises
+- **Analyse de sentiment** : NLP et LLM pour analyser les actualités financières
+- **API REST complète** : Endpoints pour toutes les fonctionnalités de la plateforme
 
 ## Features
 - ✅ **Modular pipelines** for data ingestion, feature engineering, and aggregation

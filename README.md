@@ -1,6 +1,6 @@
-# 📊 Fear & Greed Index - Bourse de Casablanca
+# 🚀 CasaTrader - Plateforme Complète d'Investissement Boursier
 
-> Système d'analyse de sentiment du marché boursier marocain avec mises à jour automatiques toutes les 10 minutes
+> **La plateforme tout-en-un pour les investisseurs de la Bourse de Casablanca**
 
 [![Status](https://img.shields.io/badge/status-production%20ready-brightgreen)]()
 [![Python](https://img.shields.io/badge/python-3.10+-blue)]()
@@ -9,321 +9,300 @@
 
 ---
 
-## 🎯 Score Actuel
+## 🎯 Vue d'ensemble
 
-**33.73 / 100** - 😟 **FEAR** (Le marché est pessimiste)
+**CasaTrader** est une plateforme SaaS complète conçue pour les investisseurs de la Bourse de Casablanca. Elle regroupe tous les outils essentiels pour analyser, suivre et gérer vos investissements en un seul endroit.
 
-*Mise à jour automatique toutes les 10 minutes*
+### ✨ Fonctionnalités Principales
+
+#### 📊 **Analyse de Marché**
+- **Fear & Greed Index** : Indice de sentiment du marché en temps réel
+- **Vue d'ensemble du marché** : Suivi des principales valeurs et indices
+- **Graphiques interactifs** : Analyse technique et historique
+- **Heatmap de volume** : Visualisation du trading
+
+#### 📰 **Actualités & Informations**
+- **Flux d'actualités financières** : Agrégation depuis plusieurs sources marocaines
+- **Analyse de sentiment** : IA pour analyser le sentiment des articles
+- **Alertes personnalisées** : Notifications sur les événements importants
+
+#### 📄 **Rapports Financiers**
+- **Scraping automatique** : Téléchargement automatique des rapports de 55+ entreprises
+- **Organisation par secteur** : Accès rapide aux documents par secteur d'activité
+- **Recherche avancée** : Trouvez rapidement les rapports recherchés
+- **Téléchargement direct** : Accès immédiat aux PDFs avec noms complets
+
+#### 💼 **Gestion de Portefeuille**
+- **Suivi de portefeuille** : Suivez vos positions en temps réel
+- **Analyse de performance** : Statistiques détaillées sur vos investissements
+- **Historique des transactions** : Journal complet de votre activité
+
+#### 🔔 **Alertes & Notifications**
+- **Alertes de prix** : Notifications quand une action atteint un seuil
+- **Alertes d'actualités** : Soyez informé des nouvelles importantes
+- **Alertes de rapports** : Notification lors de la publication de nouveaux rapports
 
 ---
 
 ## 🚀 Démarrage Rapide
 
-### ⚠️ IMPORTANT : Utilisez le Terminal Mac, PAS Cursor !
+### Prérequis
+
+- **Python 3.10+** installé
+- **Node.js 18+** installé
+- **Poetry** (pour le backend)
+- **NPM** (pour le frontend)
+- **Compte Supabase** configuré
+
+### Installation
+
+#### 1. Cloner le dépôt
 
 ```bash
-# Dans le Terminal Mac (Cmd+Espace → "Terminal")
-cd "/Volumes/YAHYA SSD/Documents/fear and"
-./start_system.sh
+git clone https://github.com/yahya-rl-2002/casaTrader.git
+cd casaTrader
 ```
 
-Puis ouvrez : **http://localhost:3000**
+#### 2. Configuration Backend
 
-**📖 Guide détaillé :** [LANCER_LE_SYSTEME.md](./LANCER_LE_SYSTEME.md)
+```bash
+cd backend
 
----
+# Installer les dépendances avec Poetry
+poetry install
 
-## ✨ Fonctionnalités
+# OU avec pip
+python -m venv .venv
+source .venv/bin/activate  # Sur Windows: .venv\Scripts\activate
+pip install -r requirements.txt
 
-### 🔄 Automatisation
-- ✅ **Mise à jour toutes les 10 minutes** (configurable)
-- ✅ Scheduler intégré avec APScheduler
-- ✅ Contrôle via API REST
-- ✅ Retries automatiques en cas d'erreur
+# Configurer les variables d'environnement
+cp .env.example .env
+# Éditer .env avec vos clés API (Supabase, OpenAI, etc.)
+```
 
-### 📊 Calcul de l'Indice
-- ✅ **Formule classique** : 6 composantes pondérées
-- ✅ **Formule simplifiée** : (Volume + Sentiment + Performance) / 76
-- ✅ Normalisation dynamique (fenêtres glissantes 90j)
-- ✅ Backtest avec corrélations T+1 et T+5
+#### 3. Configuration Frontend
 
-### 📰 Sources de Données
-- ✅ **MASI** : Données de marché en temps réel (252 jours)
-- ✅ **Medias24** : Articles économiques (prioritaire)
-- ✅ **BourseNews.ma** : Espace Investisseurs
-- ✅ **Challenge.ma** : 12 sections financières
-- ✅ **La Vie Éco** : Économie & Affaires
+```bash
+cd ..
 
-### 🧠 Analyse
-- ✅ **NLP** : Sentiment analysis avec spaCy (français)
-- ✅ **20-40 articles** analysés par mise à jour
-- ✅ **6 composantes** : Momentum, Price Strength, Volume, Volatility, Equity vs Bonds, Media Sentiment
+# Installer les dépendances
+npm install
 
-### 🎨 Dashboard
-- ✅ Interface moderne et responsive
-- ✅ Jauge principale avec gradient de couleur
-- ✅ Graphique historique interactif (90 jours)
-- ✅ Décomposition des composantes avec contributions
-- ✅ Feed médias avec sentiment et liens
-- ✅ Heatmap du volume de trading
-- ✅ Auto-refresh toutes les 5 minutes
+# Configurer les variables d'environnement
+# Créer un fichier .env.local avec vos clés Supabase
+```
+
+#### 4. Démarrer les services
+
+**Option 1 : Script automatique (Recommandé)**
+
+```bash
+./start_all.sh
+```
+
+**Option 2 : Démarrage manuel**
+
+```bash
+# Terminal 1 - Backend
+cd backend
+source .venv/bin/activate
+uvicorn app.main:app --host 0.0.0.0 --port 8001
+
+# Terminal 2 - Frontend
+npm run dev
+```
+
+### Accès aux services
+
+- **Frontend** : http://localhost:8080
+- **Backend API** : http://localhost:8001
+- **Documentation API** : http://localhost:8001/docs
 
 ---
 
 ## 📁 Structure du Projet
 
 ```
-fear-and/
-├── backend/              # FastAPI + Python
+casaTrader/
+├── backend/                 # API FastAPI + Python
 │   ├── app/
-│   │   ├── api/         # Endpoints REST (20+)
-│   │   ├── services/    # Business logic
-│   │   ├── pipelines/   # Scraping & processing
-│   │   ├── models/      # Database models
-│   │   └── tasks/       # Scheduled jobs
-│   └── tests/           # Tests automatisés
+│   │   ├── api/            # Endpoints REST
+│   │   ├── services/       # Services métier
+│   │   │   └── financial_reports_scraper.py  # Scraping automatique
+│   │   ├── pipelines/      # Traitement de données
+│   │   ├── models/         # Modèles de données
+│   │   └── tasks/          # Tâches planifiées
+│   └── tests/              # Tests automatisés
 │
-├── frontend/            # Next.js + React + TypeScript
-│   ├── app/
-│   │   └── dashboard/   # Composants visuels
-│   └── src/
-│       ├── store/       # Zustand state management
-│       └── lib/         # API client
+├── frontend/               # Interface React + Vite
+│   ├── src/
+│   │   ├── pages/         # Pages principales
+│   │   ├── components/    # Composants réutilisables
+│   │   └── data/          # Données statiques
+│   └── public/            # Assets publics
 │
-├── docs/                # Documentation
-├── infra/               # Docker & déploiement
+├── supabase/              # Configuration Supabase
+│   ├── migrations/        # Migrations de base de données
+│   └── functions/         # Edge Functions
 │
-├── start_system.sh      # 🚀 Script de démarrage
-├── stop_system.sh       # 🛑 Script d'arrêt
-└── README.md           # Ce fichier
+├── docs/                  # Documentation
+├── scripts/               # Scripts utilitaires
+└── README.md             # Ce fichier
 ```
 
 ---
 
-## 🔌 API Endpoints
+## 🔧 Technologies Utilisées
 
-### Index & Scores
-```bash
-GET  /api/v1/index/latest              # Dernier score
-GET  /api/v1/index/history?range=90d   # Historique
-GET  /api/v1/components/latest         # 6 composantes
+### Backend
+- **FastAPI** : Framework web moderne et rapide
+- **Python 3.10+** : Langage de programmation
+- **Supabase** : Backend-as-a-Service (Base de données + Storage)
+- **BeautifulSoup** : Scraping web
+- **APScheduler** : Planification de tâches
+- **OpenAI API** : Analyse de sentiment avec LLM
+
+### Frontend
+- **React 18** : Bibliothèque UI
+- **TypeScript** : Typage statique
+- **Vite** : Build tool rapide
+- **Tailwind CSS** : Framework CSS
+- **Shadcn UI** : Composants UI
+- **React Router** : Routing
+- **TanStack Query** : Gestion d'état serveur
+
+### Infrastructure
+- **Supabase** : Base de données PostgreSQL + Storage
+- **Docker** : Containerisation (optionnel)
+- **Nginx** : Reverse proxy (production)
+
+---
+
+## 📊 Fonctionnalités Détaillées
+
+### Scraping Automatique des Rapports Financiers
+
+La plateforme scrape automatiquement les rapports financiers de **55+ entreprises** cotées à la Bourse de Casablanca :
+
+- ✅ Téléchargement automatique des PDFs
+- ✅ Extraction des métadonnées (titre, date, entreprise)
+- ✅ Stockage dans Supabase Storage
+- ✅ Organisation par secteur et entreprise
+- ✅ Mise à jour quotidienne automatique
+
+**Entreprises configurées** : Akdital, Attijariwafa Bank, TGCC, Douja Prom Addoha, Afric Industries, Afriquia Gaz, Alliances, Aluminium Du Maroc, Aradei Capital, et 45+ autres...
+
+### Fear & Greed Index
+
+Indice de sentiment du marché calculé à partir de 6 composantes :
+
+1. **Momentum** (20%) - Tendance des prix
+2. **Price Strength** (15%) - Force des prix
+3. **Volume** (15%) - Volume de trading
+4. **Volatility** (20%) - Volatilité du marché
+5. **Equity vs Bonds** (15%) - Performance relative
+6. **Media Sentiment** (15%) - Sentiment des médias
+
+**Mise à jour** : Automatique toutes les 10 minutes
+
+---
+
+## 🔐 Configuration
+
+### Variables d'environnement Backend
+
+Créer `backend/.env` :
+
+```env
+# Supabase
+SUPABASE_URL=https://votre-projet.supabase.co
+SUPABASE_SERVICE_KEY=votre-service-key
+
+# OpenAI (pour analyse de sentiment)
+OPENAI_API_KEY=sk-...
+
+# Base de données
+DATABASE_URL=postgresql://...
+
+# Configuration
+ENVIRONMENT=development
 ```
 
-### Formule Simplifiée
-```bash
-GET  /api/v1/simplified-v2/score       # Score simplifié
-GET  /api/v1/simplified-v2/details     # Détails complets
-```
+### Variables d'environnement Frontend
 
-### Scheduler (Automatisation)
-```bash
-GET  /api/v1/scheduler/status          # Statut
-POST /api/v1/scheduler/trigger/{id}    # Déclencher
-POST /api/v1/scheduler/configure       # Configurer intervalle
-```
+Créer `.env.local` :
 
-### Backtest
-```bash
-GET  /api/v1/backtest/run?range=90d    # Analyse corrélation
+```env
+VITE_SUPABASE_URL=https://votre-projet.supabase.co
+VITE_SUPABASE_ANON_KEY=votre-anon-key
 ```
-
-**📚 Documentation complète :** http://localhost:8000/docs
 
 ---
 
 ## 🧪 Tests
 
 ```bash
+# Backend
 cd backend
-source .venv/bin/activate
+poetry run pytest
 
-# Test complet du système
-python test_complet_systeme.py
-
-# Test formule simplifiée
-python test_formule_simplifiee.py
-
-# Test scraping médias
-python test_30_articles.py
-
-# Test scheduler
-python test_scheduler.py
+# Frontend
+npm run test
 ```
 
 ---
 
-## 📊 Composantes de l'Indice
+## 📝 Documentation
 
-| Composante | Poids | Description |
-|------------|-------|-------------|
-| **Momentum** | 25% | Performance 125j vs 125j précédents |
-| **Price Strength** | 25% | Position vs 52-week high/low |
-| **Volume** | 15% | Volume actuel vs moyenne 30j |
-| **Volatility** | 15% | Volatilité sur 30j (inverse) |
-| **Equity vs Bonds** | 10% | Performance relative actions/obligations |
-| **Media Sentiment** | 10% | Sentiment des articles médias (NLP) |
+- [Guide d'installation](./docs/INSTALLATION.md)
+- [Documentation API](./docs/API.md)
+- [Guide de développement](./docs/DEVELOPMENT.md)
+- [Architecture](./docs/architecture.md)
 
 ---
 
-## 🎛️ Configuration
+## 🤝 Contribution
 
-### Changer l'Intervalle de Mise à Jour
+Les contributions sont les bienvenues ! N'hésitez pas à :
 
-**Via API (temporaire) :**
-```bash
-curl -X POST http://localhost:8000/api/v1/scheduler/configure \
-  -H "Content-Type: application/json" \
-  -d '{"interval_minutes": 5}'
-```
-
-**Via Code (permanent) :**
-
-Éditer `backend/app/main.py` ligne 29-33 :
-```python
-scheduler_service.schedule_interval_job(
-    job_callable=run_index_update_job,
-    minutes=5,  # ← Changer ici
-    job_id="index_update_10min"
-)
-```
+1. Fork le projet
+2. Créer une branche (`git checkout -b feature/AmazingFeature`)
+3. Commit vos changements (`git commit -m 'Add some AmazingFeature'`)
+4. Push vers la branche (`git push origin feature/AmazingFeature`)
+5. Ouvrir une Pull Request
 
 ---
 
-## 📖 Documentation
+## 📄 Licence
 
-| Document | Description |
-|----------|-------------|
-| [LANCER_LE_SYSTEME.md](./LANCER_LE_SYSTEME.md) | 🚀 **Guide de démarrage** |
-| [AUTOMATISATION.md](./AUTOMATISATION.md) | Configuration scheduler |
-| [FORMULE_SIMPLIFIEE.md](./FORMULE_SIMPLIFIEE.md) | Détail formule |
-| [DEMARRAGE_RAPIDE.md](./DEMARRAGE_RAPIDE.md) | Quick start |
-| [SYSTEME_FINALISE.md](./SYSTEME_FINALISE.md) | Récapitulatif complet |
-| [RECAPITULATIF_COMPLET.md](./RECAPITULATIF_COMPLET.md) | Vue d'ensemble technique |
+Ce projet est sous licence MIT. Voir le fichier `LICENSE` pour plus de détails.
 
 ---
 
-## 🐛 Résolution de Problèmes
+## 👤 Auteur
 
-### Le Dashboard Affiche 50 au lieu du Vrai Score
-
-**Cause :** Le backend n'est pas lancé ou n'est pas accessible
-
-**Solution :**
-1. Vérifiez que le backend tourne : `curl http://localhost:8000/api/v1/index/latest`
-2. Si erreur → Lancez `./start_system.sh` dans le Terminal Mac (pas Cursor)
-3. Vérifiez la console du navigateur (F12) pour les erreurs
-
-### EPERM: operation not permitted
-
-**Cause :** Vous essayez de lancer dans le terminal Cursor
-
-**Solution :** Ouvrez le **Terminal Mac** et lancez `./start_system.sh`
-
-### Port Already in Use
-
-```bash
-# Tuer le processus sur le port
-lsof -ti:8000 | xargs kill -9  # Backend
-lsof -ti:3000 | xargs kill -9  # Frontend
-```
+**Yahya RL**
+- GitHub: [@yahya-rl-2002](https://github.com/yahya-rl-2002)
+- Dépôt: [casaTrader](https://github.com/yahya-rl-2002/casaTrader)
 
 ---
 
-## 🏗️ Technologies
+## 🙏 Remerciements
 
-### Backend
-- **FastAPI** - Framework web
-- **SQLAlchemy** - ORM
-- **APScheduler** - Scheduler
-- **spaCy** - NLP sentiment analysis
-- **BeautifulSoup** - Web scraping
-- **Pandas** - Data processing
-- **scikit-learn** - Machine learning
-
-### Frontend
-- **Next.js 14** - React framework
-- **TypeScript** - Type safety
-- **Zustand** - State management
-- **Tailwind CSS** - Styling
-- **Recharts** - Visualisations
-
-### Infrastructure
-- **Docker** - Conteneurisation
-- **SQLite** - Base de données (dev)
-- **PostgreSQL** - Base de données (prod)
-- **Nginx** - Reverse proxy
-
----
-
-## 📈 Roadmap
-
-### ✅ Terminé
-- [x] Scraping multi-sources
-- [x] Sentiment analysis NLP
-- [x] 2 formules de calcul
-- [x] Dashboard complet
-- [x] Automatisation toutes les 10 min
-- [x] Backtest et corrélations
-- [x] API complète avec contrôle
-
-### 🔜 À Venir
-- [ ] Alertes email/Slack sur seuils
-- [ ] Dashboard backtest dans frontend
-- [ ] Export CSV/Excel
-- [ ] Authentification JWT
-- [ ] Caching Redis
-- [ ] Machine Learning prédictions
-- [ ] WebSocket temps réel
-- [ ] Mobile app
-
----
-
-## 👥 Contribution
-
-Ce projet a été développé pour analyser le sentiment du marché boursier marocain (Bourse de Casablanca).
-
----
-
-## 📄 License
-
-MIT License - Libre d'utilisation
+- **Supabase** pour l'infrastructure backend
+- **TradingView** pour les widgets de graphiques
+- Toutes les entreprises qui publient leurs rapports financiers en ligne
 
 ---
 
 ## 📞 Support
 
-**Logs :**
-- Backend : `/tmp/fear-greed-backend.log`
-- Frontend : `/tmp/fear-greed-frontend.log`
-
-**API Docs :** http://localhost:8000/docs
-
-**Dashboard :** http://localhost:3000
+Pour toute question ou problème :
+- Ouvrir une [issue](https://github.com/yahya-rl-2002/casaTrader/issues)
+- Consulter la [documentation](./docs/)
+- Contacter le support via l'application
 
 ---
 
-## ⭐ Stats
-
-- 📊 **45+ scores** enregistrés
-- 📰 **41+ articles** analysés
-- 📅 **252 jours** de données marché
-- 🔄 **Mise à jour** : Automatique toutes les 10 minutes
-- ⚡ **Performance** : ~2-3 min par mise à jour
-- 🎯 **Précision backtest** : 69.2% (T+5)
-
----
-
-**🎉 Système prêt à l'emploi ! Lancez `./start_system.sh` dans le Terminal Mac ! 🚀**
-
----
-
-**Créé le :** 24-25 octobre 2025  
-**Version :** 1.0.0  
-**Statut :** ✅ Production Ready avec Automatisation
-
-
-
-
-
-
-
+**⭐ Si ce projet vous est utile, n'hésitez pas à lui donner une étoile !**

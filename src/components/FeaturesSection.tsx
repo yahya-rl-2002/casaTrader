@@ -52,8 +52,8 @@ export function FeaturesSection() {
             <span className="text-transparent bg-clip-text bg-gradient-primary"> puissantes</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Découvrez les outils qui font de CasaTrader la plateforme de choix 
-            des investisseurs marocains modernes
+            Une suite complète d'outils pour investisseurs : rapports financiers automatiques, 
+            analyses de sentiment, suivi de marché, alertes personnalisées et bien plus encore
           </p>
         </div>
 

@@ -22,8 +22,8 @@ export function HeroSection() {
                 <span className="block text-white/90">CasaTrader</span>
               </h1>
               <p className="text-xl text-primary-foreground/80 leading-relaxed max-w-lg">
-                La plateforme de trading nouvelle génération pour la Bourse de Casablanca. 
-                Données temps réel, analyses avancées et interface intuitive.
+                La plateforme tout-en-un pour investisseurs : rapports financiers, analyses de marché, 
+                Fear & Greed Index, actualités et gestion de portefeuille. Tout ce dont vous avez besoin en un seul endroit.
               </p>
             </div>
 

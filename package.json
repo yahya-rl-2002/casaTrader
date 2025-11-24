@@ -1,7 +1,8 @@
 {
-  "name": "vite_react_shadcn_ts",
+  "name": "casa-trader",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
+  "description": "Plateforme complète d'investissement boursier pour la Bourse de Casablanca - Outils d'analyse, rapports financiers, Fear & Greed Index, et plus encore",
   "type": "module",
   "scripts": {
     "dev": "vite",
