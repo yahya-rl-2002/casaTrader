@@ -1,0 +1,90 @@
+================================================================================
+📊 RAPPORT COMPLET - INDICE FEAR & GREED CASABLANCA
+================================================================================
+
+Date du rapport : 2025-11-02 00:24:21
+API Base URL : http://localhost:8001/api/v1
+
+--------------------------------------------------------------------------------
+1. SCORE PRINCIPAL
+--------------------------------------------------------------------------------
+Score : 50.29 - Neutral (Neutre) 😐
+Date : 2025-11-02
+
+--------------------------------------------------------------------------------
+2. COMPOSANTES DÉTAILLÉES (Formule Principale)
+--------------------------------------------------------------------------------
+momentum             :  49.97 (poids: 20%) →   9.99
+price_strength       :  57.76 (poids: 15%) →   8.66
+volume               :  57.37 (poids: 15%) →   8.61
+volatility           :   3.65 (poids: 20%) →   0.73
+equity_vs_bonds      :  99.65 (poids: 15%) →  14.95
+media_sentiment      :  49.02 (poids: 15%) →   7.35
+
+Total                :                        →  50.29
+
+As_of : 2025-11-02
+
+--------------------------------------------------------------------------------
+3. SCORE SIMPLIFIÉ (Formule V2)
+--------------------------------------------------------------------------------
+Score : 14.10 - Extreme Fear (Peur Extrême) 😱
+
+Détails :
+  Volume moyen      : 51.95
+  Sentiment news    : 50.22
+  Performance marché: 5.00
+  Nombre d'actions  : 76
+  Formule           : (51.95 + 50.22 + 5.00) / 76
+  Date              : 2025-11-02
+
+--------------------------------------------------------------------------------
+4. HISTORIQUE (90 derniers jours)
+--------------------------------------------------------------------------------
+Nombre de points : 34
+Score moyen      : 49.82
+Score min        : 21.83
+Score max        : 76.13
+Dernier score    : 50.29 (2025-11-02)
+
+--------------------------------------------------------------------------------
+5. ARTICLES MÉDIA
+--------------------------------------------------------------------------------
+Nombre d'articles : 10
+Sentiment moyen  : 0.12
+
+Par source :
+  leconomiste          : 6 article(s)
+  Medias24             : 1 article(s)
+  L'Économiste         : 1 article(s)
+  challenge            : 1 article(s)
+  BourseNews           : 1 article(s)
+
+5 derniers articles :
+  1. [Medias24] Perspectives positives pour le MASI... (sentiment: 0.7)
+  2. [L'Économiste] Croissance soutenue des investissements... (sentiment: 0.8)
+  3. [challenge] Lancement du Rallye Route 75 pour le cinquantenair... (sentiment: 0.0)
+  4. [BourseNews] Volatilité accrue sur les marchés... (sentiment: -0.3)
+  5. [leconomiste] Le groupe OCP accélère sa transformation verte... (sentiment: 0.0)
+
+--------------------------------------------------------------------------------
+6. DONNÉES DE VOLUME
+--------------------------------------------------------------------------------
+Nombre de points : 34
+Volume moyen     : 56.46
+Volume min       : 1.24
+Volume max       : 95.99
+
+================================================================================
+RÉSUMÉ
+================================================================================
+
+Score actuel : 50.29 - Neutral (Neutre) 😐
+Date         : 2025-11-02
+
+Système      : ✅ Opérationnel
+Backend      : ✅ http://localhost:8001
+Frontend     : ✅ http://localhost:8080
+Scheduler    : ✅ Actif (toutes les 10 min)
+
+================================================================================

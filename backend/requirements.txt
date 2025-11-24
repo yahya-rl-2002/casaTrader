@@ -1,0 +1,57 @@
+# Fear & Greed Index - Backend Dependencies
+
+# Web Framework
+fastapi
+uvicorn[standard]
+pydantic
+pydantic-settings
+
+# Database
+sqlalchemy
+psycopg2-binary
+alembic
+
+# Data Processing
+pandas
+numpy
+scikit-learn
+
+# Web Scraping
+requests
+beautifulsoup4
+selenium
+
+# Natural Language Processing
+spacy
+nltk
+
+# Caching
+redis
+
+# Scheduling
+apscheduler
+
+# HTTP Client
+httpx
+
+# Testing
+pytest
+pytest-asyncio
+
+# Monitoring
+prometheus-client
+
+# Logging
+structlog
+
+# Utilities
+python-multipart
+python-jose[cryptography]
+passlib[bcrypt]
+
+
+
+
+
+
+

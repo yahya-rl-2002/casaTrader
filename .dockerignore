@@ -1,0 +1,73 @@
+# Docker ignore pour optimiser les builds
+
+# Git
+.git
+.gitignore
+.github
+
+# Documentation
+*.md
+docs/
+README*
+
+# Logs
+logs/
+*.log
+
+# Backups
+backups/
+*.sql
+*.db
+*.rdb
+
+# Node modules (frontend)
+node_modules/
+dist/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.so
+*.egg
+*.egg-info/
+.venv/
+venv/
+env/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Tests
+tests/
+*.test.py
+pytest.ini
+.coverage
+htmlcov/
+
+# Temporary files
+*.tmp
+*.bak
+*.cache
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Build artifacts
+build/
+dist/
+
+
+

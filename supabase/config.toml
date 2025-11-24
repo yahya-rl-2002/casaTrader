@@ -1,0 +1,14 @@
+project_id = "zhyzjahvhctonjtebsff"
+
+# Edge Functions config
+[functions."scrape-news"]
+verify_jwt = false
+
+[functions."scrape-rss-news"]
+verify_jwt = false
+
+[functions."auto-update-news"]
+verify_jwt = false
+
+[functions."auto-update-scheduler"]
+verify_jwt = false

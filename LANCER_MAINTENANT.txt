@@ -1,0 +1,62 @@
+========================================================================
+🚀 COMMENT DÉMARRER LE SYSTÈME MAINTENANT
+========================================================================
+
+⚡ INSTRUCTIONS RAPIDES (2 MINUTES) :
+
+1️⃣ Ouvrez votre Terminal Mac (pas Cursor)
+
+2️⃣ Copiez-collez ces commandes :
+
+cd "/Volumes/YAHYA SSD/Documents/fear and"
+
+chmod +x setup_api_key.sh start_with_llm.sh
+
+./setup_api_key.sh
+
+./start_with_llm.sh
+
+3️⃣ Le système démarre automatiquement ! 🎉
+
+4️⃣ Accédez au dashboard : http://localhost:3000/dashboard
+
+========================================================================
+
+✅ CE QUI VA SE PASSER :
+
+• Configuration permanente de votre clé API OpenAI ✅
+• Démarrage du backend avec LLM activé 🤖
+• Démarrage du frontend 🎨
+• Ouverture automatique du dashboard 📊
+• Mise à jour automatique toutes les 10 minutes ⏰
+
+========================================================================
+
+📊 VOUS VERREZ DANS LES LOGS :
+
+🤖 Using LLM (GPT) for sentiment analysis...
+✅ LLM sentiment analysis completed for 12 articles
+📊 Average sentiment (LLM): +0.35 → 67.50/100
+
+========================================================================
+
+💰 COÛTS :
+
+~$0.18/mois (moins cher qu'un café !) ☕
+
+========================================================================
+
+🆘 BESOIN D'AIDE ?
+
+Consultez : DEMARRAGE_MAINTENANT.md (guide complet)
+
+========================================================================
+
+🎉 PRÊT ? ALLEZ-Y !
+
+cd "/Volumes/YAHYA SSD/Documents/fear and"
+./setup_api_key.sh
+./start_with_llm.sh
+
+🚀 Let's go !
+
