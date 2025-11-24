@@ -81,3 +81,4 @@ Thumbs.db
 *.iml
 *.ipr
 *.iws
+.github/workflows/
