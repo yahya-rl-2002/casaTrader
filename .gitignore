@@ -24,6 +24,8 @@ __pycache__/
 dist/
 dist-ssr/
 build/
+.next/
+frontend/.next/
 *.local
 *.pid
 
@@ -67,6 +69,14 @@ htmlcov/
 *.sqlite
 *.sqlite3
 
+# Google Drive Credentials
+backend/credentials/
+*.json
+!package.json
+!package-lock.json
+!tsconfig.json
+!tsconfig.*.json
+
 # Temporary files
 *.tmp
 *.bak
@@ -82,3 +92,6 @@ Thumbs.db
 *.ipr
 *.iws
 .github/workflows/
+
+# Data files (optionnel - décommenter si vous ne voulez pas versionner les données)
+# data/financial-reports-organized/
